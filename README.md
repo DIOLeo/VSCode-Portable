@@ -2,6 +2,7 @@
 
 # VSCode 便携版(集成C/C++编译器)
     VSCode Portable WithMinGWw64 本文更新于2018.11.14  
+    您也可以下载README.pdf到本地查阅  
     随意转载,注明出处 https://github.com/DIOLeo/VSCode-Portable-WithMinGWw64  
     如果您对此文档有什么意见或建议欢迎提出  
     联系方式 diodev@outlook.com  
