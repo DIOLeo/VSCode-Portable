@@ -1,7 +1,8 @@
 <font face="黑体">
 
 # VSCode 便携版(集成C/C++编译器)
-    VSCode Portable WithMinGWw64 本文更新于2018.11.14  
+    VSCode Portable WithMinGWw64  
+    本文更新于2018.11.14  
     您也可以下载README.pdf到本地查阅  
     随意转载,注明出处 https://github.com/DIOLeo/VSCode-Portable-WithMinGWw64  
     如果您对此文档有什么意见或建议欢迎提出  
@@ -40,7 +41,7 @@
 在 AppData 文件夹下创建 Local , Roaming 文件夹  
 > 再强调一遍:耐心和细心
 3. 回到安装目录,在安装目录中新建一个TXT文件夹,将下列代码复制并保存,更改文件名后缀为.dat  
-```
+```dos
     @echo off
     call:set_absolute_path USERPROFILE .\.portable\User
     call:set_absolute_path APPDATA .\.portable\User\AppData\Roaming
@@ -69,7 +70,7 @@ seh结尾是纯64位编译.sjlj结尾是32,64两种编译,按需下载
 ![3.png](https://i.loli.net/2018/11/14/5bec21a444058.png)  
 
 然后将生成的 launch.json 文件代码删除,换成下面的并保存  
-```
+```json
     {
     "version": "0.2.0",
     "configurations": [
@@ -98,7 +99,7 @@ seh结尾是纯64位编译.sjlj结尾是32,64两种编译,按需下载
 ```  
 4. 按F5调试,此时肯定会报错,打开新生成的 tasks.json 文件  
 将生成的 tasks.json 文件代码删除,换成下面的并保存  
-```
+```json
     {
         "version": "2.0.0",
         "tasks": [
