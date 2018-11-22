@@ -63,6 +63,7 @@ seh结尾是纯64位编译.sjlj结尾是32,64两种编译,按需下载
 5. 下载完成后解压到刚才创建的 `.portable\mingw64` 目录下  
 6. 运行安装目录下 `Start.bat`  
 7. 添加右键菜单 *(可选)*  
+右键 `AddShellLink.reg` 用编辑文件打开,更改其中路径值  
 双击安装目录下的 `AddShellLink.reg` 合并注册表  
 附注册表代码  
 ```
@@ -75,7 +76,7 @@ Windows Registry Editor Version 5.00
 "Icon"="D:\\VSCode\\VSCode-x64\\Code.exe"
 
 [HKEY_CLASSES_ROOT\*\shell\VSCode\command]
-@="\"D:\\VSCode\\VSCode-x64\\Code.portable.bat\" \"%1\""
+@="\"D:\\VSCode\\VSCode-x64\\Start.bat\" \"%1\""
 
 ;Open Folder
 
@@ -84,7 +85,7 @@ Windows Registry Editor Version 5.00
 "Icon"="D:\\VSCode\\VSCode-x64\\Code.exe"
 
 [HKEY_CLASSES_ROOT\Directory\shell\VSCode\command]
-@="\"D:\\VSCode\\VSCode-x64\\Code.portable.bat\" \"%V\""
+@="\"D:\\VSCode\\VSCode-x64\\Start.bat\" \"%V\""
 ```
 
 ## Hello World 测试
