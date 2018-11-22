@@ -6,6 +6,7 @@
     随意转载,注明出处 https://github.com/DIOLeo/VSCode-Portable-WithMinGWw64  
     如果您对此文档有什么意见或建议欢迎提出  
     联系方式 diodev@outlook.com  
+    test
 
 ****
 
