@@ -14,6 +14,8 @@
 * 集成 MinGW-w64 v6.0.0
 * 集成 cpptools
 * 集成 vscode-language-pack-zh-hans
+* 集成 open-html-in-browser(V1.2版本后)  
+* 集成 markdown-pdf 1.2.0(V1.2版本后)
 * 可右键以`VSCode`打开
 * 可自由更新
 
@@ -28,6 +30,7 @@
 ## History 更新日志
 * V1.0 [2018.11.14] VSCode版本 V1.29.0  
 * V1.1 [2019.02.10] VSCode版本 V1.31.0  
+* V1.2 [2019.04.08] VSCode版本 V1.33.0  
 
 ## Document 制作教程
 > 教程略繁琐,需要一定动手能力和足够的耐心和细心,脾气不好请直接下载傻瓜版本  

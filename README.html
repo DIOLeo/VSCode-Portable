@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.MD</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<font face="黑体">
+<h1 id="vscode-%E4%BE%BF%E6%90%BA%E7%89%88%E9%9B%86%E6%88%90cc%E7%BC%96%E8%AF%91%E5%99%A8">VSCode 便携版(集成C/C++编译器)</h1>
+<pre><code>VSCode Portable WithMinGWw64  
+本文更新于2019.02.10  
+随意转载,注明出处 https://github.com/DIOLeo/VSCode-Portable-WithMinGWw64  
+如果您对此文档有什么意见或建议欢迎提出  
+联系方式 diodev@outlook.com  
+</code></pre>
+<hr>
+<h2 id="feature-%E7%89%B9%E7%82%B9">Feature 特点</h2>
+<ul>
+<li>解压即用,无需配置环境变量</li>
+<li>集成 MinGW-w64 v6.0.0</li>
+<li>集成 cpptools</li>
+<li>集成 vscode-language-pack-zh-hans</li>
+<li>集成 open-html-in-browser(V1.2版本后)</li>
+<li>集成 markdown-pdf 1.2.0(V1.2版本后)</li>
+<li>可右键以<code>VSCode</code>打开</li>
+<li>可自由更新</li>
+</ul>
+<h2 id="install-%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95">Install 安装方法</h2>
+<ol>
+<li>下载压缩包<br>
+链接：https://pan.baidu.com/s/1-c_53Yi3zw7I4ObYOhJ_iw<br>
+提取码：ac25</li>
+<li>解压缩(非中文目录)</li>
+<li>运行安装目录下<code>Start.bat</code></li>
+</ol>
+<blockquote>
+<p>不要直接运行 Code.exe !!!</p>
+</blockquote>
+<h2 id="history-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97">History 更新日志</h2>
+<ul>
+<li>V1.0 [2018.11.14] VSCode版本 V1.29.0</li>
+<li>V1.1 [2019.02.10] VSCode版本 V1.31.0</li>
+<li>V1.2 [2019.04.08] VSCode版本 V1.33.0</li>
+</ul>
+<h2 id="document-%E5%88%B6%E4%BD%9C%E6%95%99%E7%A8%8B">Document 制作教程</h2>
+<blockquote>
+<p>教程略繁琐,需要一定动手能力和足够的耐心和细心,脾气不好请直接下载傻瓜版本<br>
+需要的文件:VSCode,MinGW-w64编译环境</p>
+</blockquote>
+<ol>
+<li>下载VSCode压缩包 https://code.visualstudio.com/Download<br>
+<img src="https://i.loli.net/2018/11/14/5bec15bda045c.png" alt="1.png"><br>
+解压到非中文目录,如 <code>D:\</code></li>
+<li>在安装目录中创建名为 <code>.portable</code> 的文件夹<br>
+在 <code>.portable</code> 文件夹下创建 <code>User</code> , <code>mingw64</code> 文件夹<br>
+在 <code>User</code> 文件夹下创建 <code>.vscode</code> , <code>AppData</code> , <code>Desktop</code> 文件夹<br>
+在 <code>.vscode</code> 文件夹下创建 <code>extensions</code> 文件夹<br>
+在 <code>AppData</code> 文件夹下创建 <code>Local</code> , <code>Roaming</code> 文件夹</li>
+</ol>
+<blockquote>
+<p>再强调一遍:耐心和细心</p>
+</blockquote>
+<ol start="3">
+<li>回到安装目录,在安装目录中新建一个TXT文件夹,将下列代码复制并保存,更改文件名后缀为<code>.bat</code></li>
+</ol>
+<pre class="hljs"><code><div>@<span class="hljs-built_in">echo</span> off
+<span class="hljs-built_in">cd</span> /d %~dp0
+<span class="hljs-function">call:<span class="hljs-title">set_absolute_path</span> <span class="hljs-title">USERPROFILE</span> .\.<span class="hljs-title">portable</span>\<span class="hljs-title">User</span>
+<span class="hljs-title">call:set_absolute_path</span> <span class="hljs-title">APPDATA</span> .\.<span class="hljs-title">portable</span>\<span class="hljs-title">User</span>\<span class="hljs-title">AppData</span>\<span class="hljs-title">Roaming</span>
+<span class="hljs-title">call:set_absolute_path</span> <span class="hljs-title">mingwbin</span> .\.<span class="hljs-title">portable</span>\<span class="hljs-title">mingw64</span>\<span class="hljs-title">bin</span>
+<span class="hljs-title">set</span> <span class="hljs-title">path</span>=%<span class="hljs-title">mingwbin</span>%;%<span class="hljs-title">path</span>%
+<span class="hljs-title">start</span> <span class="hljs-title">Code.exe</span> %1
+<span class="hljs-title">exit</span>
+
+:<span class="hljs-title">set_absolute_path</span>
+<span class="hljs-title">for</span> /<span class="hljs-title">f</span> %%<span class="hljs-title">p</span> <span class="hljs-title">in</span> ("%2") <span class="hljs-title">do</span> (<span class="hljs-title">set</span> %1=%%~<span class="hljs-title">fp</span>)
+<span class="hljs-title">goto:eof</span> 
+</span></div></code></pre>
+<ol start="4">
+<li>下载编译环境离线安装包 x86_64-8.1.0-release-win32-sjlj-rt_v6-rev0<br>
+https://sourceforge.net/projects/mingw-w64/files/<br>
+往下拉,找到 MinGW-W64 GCC-8.1.0 -&gt; x86_64-win32-sjlj<br>
+<img src="https://i.loli.net/2018/11/14/5bec1dd017079.png" alt="2.png"><br>
+seh结尾是纯64位编译.sjlj结尾是32,64两种编译,按需下载</li>
+<li>下载完成后解压到刚才创建的 <code>.portable\mingw64</code> 目录下</li>
+<li>运行安装目录下 <code>Start.bat</code></li>
+<li>添加右键菜单 <em>(可选)</em><br>
+右键 <code>AddShellLink.reg</code> 用编辑文件打开,更改其中路径值<br>
+双击安装目录下的 <code>AddShellLink.reg</code> 合并注册表<br>
+附注册表代码</li>
+</ol>
+<pre class="hljs"><code><div>Windows Registry Editor Version 5.00
+
+;Open File
+
+[HKEY_CLASSES_ROOT\*\shell\VSCode]
+@=&quot;Open with Code&quot;
+&quot;Icon&quot;=&quot;D:\\VSCode\\VSCode-x64\\Code.exe&quot;
+
+[HKEY_CLASSES_ROOT\*\shell\VSCode\command]
+@=&quot;\&quot;D:\\VSCode\\VSCode-x64\\Start.bat\&quot; \&quot;%1\&quot;&quot;
+
+;Open Folder
+
+[HKEY_CLASSES_ROOT\Directory\shell\VSCode]
+@=&quot;Open with Code&quot;
+&quot;Icon&quot;=&quot;D:\\VSCode\\VSCode-x64\\Code.exe&quot;
+
+[HKEY_CLASSES_ROOT\Directory\shell\VSCode\command]
+@=&quot;\&quot;D:\\VSCode\\VSCode-x64\\Start.bat\&quot; \&quot;%V\&quot;&quot;
+</div></code></pre>
+<h2 id="hello-world-%E6%B5%8B%E8%AF%95">Hello World 测试</h2>
+<ol>
+<li>打开VSCode,点击左侧文件标志,打开文件夹,(!注意,VSCode只支持文件夹下构建程序,从VC6.0过渡过来的需要适应一下!)</li>
+<li>新建 <code>test.c</code> 文件,键入 <code>hello world</code> 代码<br>
+(!注意,VSCode跟某些IDE不同,生成的exe不会出现&quot;Press any key to continue&quot;,需要手动加 <code>getchar()</code> 或 <code>system(&quot;pause&quot;)</code>!)</li>
+<li>点击左侧调试按钮,如下图,添加调试,随便选一个,目的是生成 <code>launch.json</code> 文件<br>
+<img src="https://i.loli.net/2018/11/14/5bec21a444058.png" alt="3.png"></li>
+</ol>
+<p>然后将生成的 <code>launch.json</code> 文件代码删除,换成下面的并保存</p>
+<pre class="hljs"><code><div>{
+<span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.2.0"</span>,
+<span class="hljs-attr">"configurations"</span>: [
+    {
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"C++ Launch"</span>,
+        <span class="hljs-attr">"preLaunchTask"</span>: <span class="hljs-string">"build"</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"cppdbg"</span>,
+        <span class="hljs-attr">"request"</span>: <span class="hljs-string">"launch"</span>,
+        <span class="hljs-attr">"program"</span>: <span class="hljs-string">"${fileDirname}/${fileBasenameNoExtension}.exe"</span>,
+        <span class="hljs-attr">"args"</span>: [],
+        <span class="hljs-attr">"stopAtEntry"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"cwd"</span>: <span class="hljs-string">"${fileDirname}"</span>,
+        <span class="hljs-attr">"environment"</span>: [],
+        <span class="hljs-attr">"externalConsole"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"MIMode"</span>: <span class="hljs-string">"gdb"</span>,
+        <span class="hljs-attr">"miDebuggerPath"</span>: <span class="hljs-string">".\\.portable\\mingw64\\bin\\gdb.exe"</span>,
+        <span class="hljs-attr">"setupCommands"</span>: [
+            {
+                <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Enable pretty-printing for gdb"</span>,
+                <span class="hljs-attr">"text"</span>: <span class="hljs-string">"-enable-pretty-printing"</span>,
+                <span class="hljs-attr">"ignoreFailures"</span>: <span class="hljs-literal">true</span>
+            }
+        ]
+    }]
+}
+</div></code></pre>
+<ol start="4">
+<li>按F5调试,此时肯定会报错,打开新生成的 <code>tasks.json</code> 文件<br>
+将生成的 <code>tasks.json</code> 文件代码删除,换成下面的并保存</li>
+</ol>
+<pre class="hljs"><code><div>{
+    <span class="hljs-attr">"version"</span>: <span class="hljs-string">"2.0.0"</span>,
+    <span class="hljs-attr">"tasks"</span>: [
+        {
+            <span class="hljs-attr">"label"</span>: <span class="hljs-string">"build"</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-string">"shell"</span>,
+            <span class="hljs-attr">"group"</span>: {
+                <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"build"</span>,
+                <span class="hljs-attr">"isDefault"</span>: <span class="hljs-literal">true</span>
+            },
+            <span class="hljs-attr">"presentation"</span>: {
+                <span class="hljs-attr">"echo"</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-attr">"reveal"</span>: <span class="hljs-string">"always"</span>,
+                <span class="hljs-attr">"focus"</span>: <span class="hljs-literal">false</span>,
+                <span class="hljs-attr">"panel"</span>: <span class="hljs-string">"shared"</span>
+            },
+            <span class="hljs-attr">"windows"</span>: {
+                <span class="hljs-attr">"command"</span>: <span class="hljs-string">"g++"</span>,
+                <span class="hljs-attr">"args"</span>: [
+                    <span class="hljs-string">"-ggdb"</span>,
+                    <span class="hljs-string">"\"${file}\""</span>,
+                    <span class="hljs-string">"--std=c++11"</span>,
+                    <span class="hljs-string">"-o"</span>,
+                    <span class="hljs-string">"\"${fileDirname}\\${fileBasenameNoExtension}.exe\""</span>
+                ]
+            }
+        }
+    ]
+}
+</div></code></pre>
+<ol start="5">
+<li>此时再按下F5,即可看到程序成功运行<br>
+<img src="https://i.loli.net/2018/11/14/5bec21a185487.png" alt="4.png"></li>
+<li>大功告成!</li>
+</ol>
+<hr>
+<h2 id="reference-%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">Reference 参考文献</h2>
+<blockquote>
+<p>VSCode官方文档 https://code.visualstudio.com/docs<br>
+CSDN_ID:黑猫崽儿 https://blog.csdn.net/c_duoduo/article/details/52083494<br>
+DOS命令大全 https://www.cnblogs.com/zqifa/p/windows-dos-1.html<br>
+</font></p>
+</blockquote>
+
+</body>
+</html>
