@@ -2,22 +2,79 @@
 
 # VSCode 便携版(集成C/C++编译器)
     VSCode Portable WithMinGWw64  
-    本文更新于2019.02.10  
+    本文更新于2019.06.30  
     随意转载,注明出处 https://github.com/DIOLeo/VSCode-Portable-WithMinGWw64  
     如果您对此文档有什么意见或建议欢迎提出  
     联系方式 diodev@outlook.com  
 
 ****
 
-## Feature 特点
+## Feature 特点  
 * 解压即用,无需配置环境变量
-* 集成 MinGW-w64 v6.0.0
 * 集成 cpptools
 * 集成 vscode-language-pack-zh-hans
-* 集成 open-html-in-browser(V1.2版本后)  
-* 集成 markdown-pdf 1.2.0(V1.2版本后)
-* 可右键以`VSCode`打开
+* 集成 open-html-in-browser
+* 集成 markdown-pdf
+* 集成 python
+* 包含右键以`VSCode`打开注册表工具
 * 可自由更新
+
+## Install 安装方法
+1. 下载压缩包  
+链接：https://pan.baidu.com/s/1-c_53Yi3zw7I4ObYOhJ_iw  
+提取码：ac25  
+2. 解压缩(非中文目录)  
+3. 直接运行 Code.exe  
+
+## History 更新日志
+* V1.34 [2019.05.27] VSCode版本 V1.34.0  
+* V1.35 [2019.06.29] VSCode版本 V1.35.1  
+
+## Document 制作教程
+> 需要的文件:VSCode  
+1. 下载VSCode压缩包 https://code.visualstudio.com/Download  
+![1.png](https://i.loli.net/2018/11/14/5bec15bda045c.png)  
+解压到非中文目录,如 `D:\`  
+2. 在安装目录中创建名为 `data` 的文件夹  
+在 `data` 文件夹下创建 `extensions` , `temp` , `user-data` 文件夹  
+3. 添加右键菜单 *(可选)*  
+右键 `AddShellLink.reg` 用编辑文件打开,更改其中路径值  
+双击安装目录下的 `AddShellLink.reg` 合并注册表  
+附注册表代码  
+```
+Windows Registry Editor Version 5.00
+
+;Open File
+
+[HKEY_CLASSES_ROOT\*\shell\VSCode]
+@="Open with Code"
+"Icon"="D:\\VSCode\\VSCode-x64\\Code.exe"
+
+[HKEY_CLASSES_ROOT\*\shell\VSCode\command]
+@="\"D:\\VSCode\\VSCode-x64\\Start.bat\" \"%1\""
+
+;Open Folder
+
+[HKEY_CLASSES_ROOT\Directory\shell\VSCode]
+@="Open with Code"
+"Icon"="D:\\VSCode\\VSCode-x64\\Code.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\VSCode\command]
+@="\"D:\\VSCode\\VSCode-x64\\Start.bat\" \"%V\""
+```
+
+****
+## 以下内容为V1.33.1以前的旧版文档,仅作备份
+
+## Feature 特点
+* 解压即用,无需配置环境变量  
+* 集成 MinGW-w64 v6.0.0  
+* 集成 cpptools  
+* 集成 vscode-language-pack-zh-hans  
+* 集成 open-html-in-browser(V1.2版本后)  
+* 集成 markdown-pdf 1.2.0(V1.2版本后)  
+* 可右键以`VSCode`打开  
+* 可自由更新  
 
 ## Install 安装方法
 1. 下载压缩包  
@@ -43,7 +100,7 @@
 在 `User` 文件夹下创建 `.vscode` , `AppData` , `Desktop` 文件夹  
 在 `.vscode` 文件夹下创建 `extensions` 文件夹  
 在 `AppData` 文件夹下创建 `Local` , `Roaming` 文件夹  
-> 再强调一遍:耐心和细心
+> 再强调一遍:耐心和细心  
 3. 回到安装目录,在安装目录中新建一个TXT文件夹,将下列代码复制并保存,更改文件名后缀为`.bat`  
 ```dos
 @echo off
