@@ -1,6 +1,6 @@
 <font face="黑体">
 
-# VSCode 便携版(集成C/C++编译器)
+# VSCode 便携版
     VSCode Portable WithMinGWw64  
     本文更新于2019.06.30  
     随意转载,注明出处 https://github.com/DIOLeo/VSCode-Portable-WithMinGWw64  
