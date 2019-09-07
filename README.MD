@@ -1,4 +1,4 @@
-<font face="黑体">
+<font face="等线">
 
 # VSCode 便携版
     VSCode Portable WithMinGWw64  
@@ -30,6 +30,7 @@
 * V1.34 [2019.05.27] VSCode版本 V1.34.0  
 * V1.35 [2019.06.29] VSCode版本 V1.35.1  
 * V1.36 [2019.08.09] VSCode版本 V1.36.1  
+* V1.38 [2019.09.07] VSCode版本 V1.38.1  
 
 ## Document 制作教程
 > 需要的文件:VSCode  
