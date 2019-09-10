@@ -1,4 +1,4 @@
-<font face="等线">
+<font face="Calibri,等线">
 
 # VSCode 便携版
     VSCode Portable WithMinGWw64  
