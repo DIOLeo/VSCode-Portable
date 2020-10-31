@@ -1,11 +1,8 @@
-<font face="Calibri,等线">
-
 # VSCode 便携版
-    VSCode Portable WithMinGWw64  
-    本文更新于2019.06.30  
-    随意转载,注明出处 https://github.com/DIOLeo/VSCode-Portable-WithMinGWw64  
+    VSCode Portable  
+    本文更新于2020.10.30  
+    随意转载,注明出处 https://github.com/DIOLeo/VSCode-Portable  
     如果您对此文档有什么意见或建议欢迎提出  
-    联系方式 diodev@outlook.com  
 
 ****
 
@@ -234,4 +231,3 @@ Windows Registry Editor Version 5.00
 > VSCode官方文档 https://code.visualstudio.com/docs  
 CSDN_ID:黑猫崽儿 https://blog.csdn.net/c_duoduo/article/details/52083494  
 DOS命令大全 https://www.cnblogs.com/zqifa/p/windows-dos-1.html  
-</font>
