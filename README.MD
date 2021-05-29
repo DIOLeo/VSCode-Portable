@@ -1,6 +1,6 @@
 # VSCode 便携版
     VSCode Portable  
-    本文更新于2020.10.30  
+    本文更新于2021.05.29  
     随意转载,注明出处 https://github.com/DIOLeo/VSCode-Portable  
     如果您对此文档有什么意见或建议欢迎提出  
 
@@ -8,11 +8,8 @@
 
 ## Feature 特点  
 * 解压即用,无需配置环境变量
-* 集成 cpptools
-* 集成 vscode-language-pack-zh-hans
-* 集成 open-html-in-browser
-* 集成 markdown-pdf
-* 集成 python
+* 集成 C/C++
+* 集成 Python
 * 包含右键以`VSCode`打开注册表工具
 * 可自由更新
 
@@ -33,6 +30,7 @@
 * V1.41 [2019.12.17] VSCode版本 V1.41.0
 * V1.42 [2020.03.18] VSCode版本 V1.42.0
 * V1.50 [2020.10.30] VSCode版本 V1.50.1
+* V1.56 [2021.05.29] VSCode版本 V1.56.2
 
 ## Document 制作教程
 > 需要的文件:VSCode  
